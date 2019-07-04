@@ -91,7 +91,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> <?php echo $judul; ?></a></li>
-        <li><a hr nef="#"><i class="fa fa-right"></i> <?php echo $sub_judul; ?></a></li>
+        <li><a href="#"><i class="fa fa-right"></i> <?php echo $sub_judul; ?></a></li>
       </ol>
     </section>
     <!-- disini konten -->

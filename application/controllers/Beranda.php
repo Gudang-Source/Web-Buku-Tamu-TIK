@@ -9,7 +9,7 @@ class Beranda extends CI_Controller {
 		$isi['judul'] = 'Beranda';
 		$isi['Welcome'] = 'Beranda';
 		$isi['sub_judul'] = '';
-		$isi['title'] = "Inventaris TIK | Dashboard";
+		$isi['title'] = "E-Learning TIK | Dashboard";
 		$isi['menu'] = "Beranda/menu/menu_beranda";
 		//$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		/*$isi['data']		= $this->db->query("SELECT * FROM mahasiswa

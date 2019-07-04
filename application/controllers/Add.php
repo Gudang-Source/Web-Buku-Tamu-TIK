@@ -10,7 +10,7 @@ class Add extends CI_Controller {
 		$isi['Welcome'] = 'Tambah Barang';
 		$isi['sub_judul'] = '';
 		$isi['menu'] = "Beranda/menu/menu_nonaktif";
-		$isi['title'] = "Inventaris TIK | Add Barang";
+		$isi['title'] = "E-Learning TIK | Add Barang";
 		//$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		//$isi['data']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		$this->load->view('Beranda/tampilan_beranda',$isi);

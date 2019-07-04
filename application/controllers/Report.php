@@ -10,7 +10,7 @@ class Report extends CI_Controller {
 		$isi['Welcome'] = 'Report';
 		$isi['sub_judul'] = '';
 		$isi['menu'] = "Beranda/menu/menu_report";
-		$isi['title'] = "Inventaris TIK | Laporan";
+		$isi['title'] = "E-Learning TIK | Laporan";
 		//$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		//$isi['data']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		$this->load->view('Beranda/tampilan_beranda',$isi);

@@ -158,8 +158,8 @@
 				<div class="row">
 					<div class="col-md-7 col-sm-7" style="color: #fff;">
 						<blockquote>
-							<h1 style="color: #fff"><strong>SI Inventaris TIK </strong></h1>
-							<p>Selamat Datang di Sistem Informasi Tugas Akhir GEOFISIKA ITERA.</p>
+							<h1 style="color: #fff"><strong>E-Learning TIK </strong></h1>
+							<p>Selamat Datang di Sistem Informasi E-Learning TIK.</p>
 						  	<footer style="color: #fff">Administrator</footer>
 						</blockquote>
 					</div>
@@ -202,39 +202,16 @@
 						        </div>
 						        <!-- /.col -->
 						        <div class="col-xs-4">
-               <div class="text-right">
+               					<div class="text-right">
 						          <button type="submit" class="btn btn-primary">
 						           <i class="fa fa-sign-in"></i>
 						           Masuk
 						          </button>
-               </div>
+               					</div>
 						        </div>
 						        <!-- /.col -->
 						      </div>
 						    </form>
-
-						    <div class="text-center">
-           <p><font color="#1a1816">- Atau -</font></p>
-						    </div>
-						    <div class="row">
-						       <div class="text-center">
-						        <a href="<?php echo base_url();?>Lupapas" class="btn btn-danger">
-						         <i class="fa fa-key"></i>
-						         Lupa Password
-						        </a>
-						       </div>
-						      </div>
-						      <!-- /.col -->
-						      <!--div class="col-xs-4">
-						       <div class="text-right">
-						        <a href="<?php echo base_url();?>Register"  class="btn btn-success">
-						         <i class="fa fa-user"></i>&nbsp
-						         Daftar
-						        </a>
-						       </div>
-                 </div-->
-						      <!-- /.col -->
-						    </div>
 						  </div>
 						  <!-- /.login-box-body -->
 						</div>

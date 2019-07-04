@@ -4,7 +4,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		//$Email = $this->session->userdata('Email');
-		$data['title'] = "Inventaris TIK | Masuk";
+		$data['title'] = "E-Learning TIK | Masuk";
 		$this->load->view('tampilan_login', $data);
 	}
 
