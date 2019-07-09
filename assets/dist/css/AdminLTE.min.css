@@ -5305,6 +5305,10 @@ table.text-center th {
 	background-color: #0073b7 !important
 }
 
+.bg-white {
+	background-color: #ffffff !important
+}
+
 .bg-light-blue,
 .label-primary,
 .modal-primary .modal-body {

@@ -7,7 +7,6 @@
            <i class="fa fa-clipboard" aria-hidden="true"></i>
            <h3 class="box-title text-center">Today's Report</h3>
        </div>
-       <h5> Test </h5>
        <table class="table">
         <tbody>
          <tr>

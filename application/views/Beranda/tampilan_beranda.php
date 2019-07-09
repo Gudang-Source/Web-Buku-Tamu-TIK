@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/dropify/dropify.min.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/custom.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/pc.css">
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/timepicker/bootstrap-timepicker.min.css">
   <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/gambar/favicon.png">
 </head>
