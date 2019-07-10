@@ -24,7 +24,7 @@
                 background-repeat: repeat;
             }
         </style>
-<body id="latarbelakang" class="latarbelakang hold-transition skin-blue layout-boxed sidebar-mini" style="height: auto; min-height: 100%;">
+<body id="latarbelakang" class="latarbelakang hold-transition skin-blue layout-boxed" style="height: auto; min-height: 100%;">
 <!-- Site wrapper -->
 <div>
  &nbsp
@@ -55,34 +55,17 @@
 </div>
 <div class="wrapper">
   <header class="main-header">
-    <!-- Logo -->
-    <a href="<?php echo base_url() ?>" class="logo">
-      <!-- jika android / jika di kecilkan -->
+    <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+    <a href="<?php echo base_url() ?>home" class="logo">
       <span class="logo-mini"><b>TIK</b></span>
-      <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>E</b>-Learning TIK</span>
     </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-      <div class="navbar-custom-menu">
-       <ul class="nav navbar-nav">
-        <li>
-         <a href="<?php echo base_url() ?>Beranda/logout"><i class="fa fa-sign-out"></i>&nbsp Logout</a>
-        </li>
-       </ul>
-      </div>
+          </div>
+          </div>
     </nav>
   </header>
-
-  <!-- =============================================== -->
-  <!-- Menu -->
-  <?php $this->load->view($menu); ?>
-  <!-- =============================================== -->
-  <!-- / Menu -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -101,7 +84,7 @@
 
   <!-- /.content-wrapper -->
   <div class="control-sidebar-bg"></div>
-  <footer class="main-footer">
+  <footer class="footer-user">
     <div class="pull-right hidden-xs">
       <b>Version</b> Beta
     </div>
