@@ -16,12 +16,11 @@ class Setting_Macaddress extends CI_Controller {
 		$this->load->view('Beranda/tampilan_beranda',$isi);
 	}
 
-	function updatesandi() {
-		$id = $this->session->userdata('inputMac');
-		$mac_lama = $this->input->post('inputOldMac');
+	function updatemac() {
+		$id = $this->input->post('inputPCNumb');
 		$mac_baru = $this->input->post('inputNewMac');
 		$this->load->model('model_ubahmac');
-		$this->model_ubahmac->updatemac($id,$mac_lama,$mac_baru);
+		$this->model_ubahmac->updatemac($id,$mac_baru);
 		echo "<script>window.alert('Mac-address Berhasil diubah dengan Mac-address baru')</script>";
 		echo "<meta http-equiv='refresh' content='0;url=http://localhost/Bukutamu-TIK/setting_macaddress'>";
 	}

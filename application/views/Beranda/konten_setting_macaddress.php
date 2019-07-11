@@ -8,23 +8,16 @@
            <h3 class="box-title text-center">Change Mac-address</h3>
        </div>
         <div class="box-body">
-        <form class="form-horizontal" action="<?php echo base_url(); ?>Setting_Macaddress" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="<?php echo base_url(); ?>Setting_Macaddress/updatemac" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                  <label for="inputPCNumb" class="col-sm-2 control-label">Nomor PC</label>
+                  <label class="col-sm-2 control-label">Nomor PC</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPCNumb" name="inputPCNumb" placeholder="Nomor PC">
                   </div>
                 </div>
                 <div> &nbsp </div>
                 <div class="form-group">
-                  <label for="inputOldMac" class="col-sm-2 control-label">Mac-address Sekarang</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputOldMac" name="inputOldMac" placeholder="Mac-address Saat Ini">
-                  </div>
-                </div>
-                <div> &nbsp </div>
-                <div class="form-group">
-                  <label for="inputNewMac" class="col-sm-2 control-label">Mac-address Baru</label>
+                  <label class="col-sm-2 control-label">Mac-address Baru</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputNewMac" name="inputNewMac" placeholder="Mac-address Baru">
                   </div>
