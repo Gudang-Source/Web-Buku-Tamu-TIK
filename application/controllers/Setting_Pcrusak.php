@@ -15,4 +15,12 @@ class Setting_Pcrusak extends CI_Controller {
 		//$isi['data']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		$this->load->view('Beranda/tampilan_beranda',$isi);
 	}
+
+	function updatepcrusak() {
+		$id = $this->input->post('inputPCNumb');
+		$this->load->model('model_settingpc');
+		$this->model_settingpc->updatepcrusak($id);
+		echo "<script>window.alert('Perubahan data berhasil')</script>";
+		echo "<meta http-equiv='refresh' content='0;url=http://localhost/Bukutamu-TIK/setting_pcrusak'>";
+	}
 }

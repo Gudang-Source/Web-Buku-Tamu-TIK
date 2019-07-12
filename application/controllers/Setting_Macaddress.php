@@ -19,8 +19,8 @@ class Setting_Macaddress extends CI_Controller {
 	function updatemac() {
 		$id = $this->input->post('inputPCNumb');
 		$mac_baru = $this->input->post('inputNewMac');
-		$this->load->model('model_ubahmac');
-		$this->model_ubahmac->updatemac($id,$mac_baru);
+		$this->load->model('model_settingpc');
+		$this->model_settingpc->updatemac($id,$mac_baru);
 		echo "<script>window.alert('Mac-address Berhasil diubah dengan Mac-address baru')</script>";
 		echo "<meta http-equiv='refresh' content='0;url=http://localhost/Bukutamu-TIK/setting_macaddress'>";
 	}
