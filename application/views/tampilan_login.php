@@ -164,7 +164,6 @@
 						</blockquote>
 					</div>
 					<div class="col-lg-4 col-md-4 col-md-offset-1 col-sm-5">
-
 						<div class="login-box">
 						  <div class="form-title" id="latarbelakang">
 						     <font color="white">
