@@ -91,7 +91,7 @@
              	    background-size: cover;
              	}
              	.item:nth-child(4) {
-             	    background: url(<?php base_url() ?>assets/bglogin/4.jpg) no-repeat center center fixed;
+             	    background: url(<?php base_url() ?>assets/bglogin/4.png) no-repeat center center fixed;
              	    -webkit-background-size: cover;
              	    -moz-background-size: cover;
              	    -o-background-size: cover;
@@ -128,8 +128,8 @@
              	}
           </style>
           <script type="text/javascript">
-          	$('#mybgcarousel').carousel({interval: 2000});
-          	$('#myCarousel').carousel({interval: 500});
+          	$('.mybgcarousel').carousel({interval: 2000});
+          	$('.myCarousel').carousel({interval: 500});
           </script>
 </head>
 <body>

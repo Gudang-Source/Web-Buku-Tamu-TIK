@@ -1,16 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Home extends CI_Controller {
+class Documentation extends CI_Controller {
 	public function index()
 	{
 		//$this->model_keamanan->getkeamanan();
 		//$email_login = $this->session->userdata('Email');
-		$isi['konten'] = 'Home/konten_home';
+		$isi['konten'] = 'Home/konten_documentation';
 		$isi['judul'] = 'Home';
-		$isi['Welcome'] = 'Home';
-		$isi['sub_judul'] = '';
-		$isi['title'] = "E-Learning TIK";
-		$isi['menu'] = "Home/menu/menu_home";
+		$isi['Welcome'] = 'Documentation';
+		$isi['sub_judul'] = 'Documentation';
+		$isi['title'] = "E-Learning TIK | Documentation";
+		$isi['menu'] = "Home/menu/menu_documentation";
 		//$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
 		/*$isi['data']		= $this->db->query("SELECT * FROM mahasiswa
                                                 INNER JOIN tugas_akhir ON tugas_akhir.Email = mahasiswa.Email
