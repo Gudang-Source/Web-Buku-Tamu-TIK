@@ -70,26 +70,58 @@
                     <i class="fa fa-tv" aria-hidden="true"></i>
                     <h3 class="box-title text-center">Daftar Komputer</h3>
                 </div>
+
+
+                <?php
+
+//Connect API Mikrotik
+use PEAR2\Net\RouterOS;
+
+require_once 'PEAR2/Autoload.php';
+
+$util = new RouterOS\Util(
+    $client = new RouterOS\Client('10.50.50.1', 'kp', 'kp')
+);
+$util->setMenu('/ip/hotspot/active');
+
+foreach ($util->getAll() as $item) {
+    $user[] = $item->getProperty('user');
+    $ip[]   = $item->getProperty('address');
+    $mac[]  = $item->getProperty('mac-address');
+}
+$arrlength = count($user);
+?>
                 <div class="box-body table-responsive no-padding">
                     <table class="table">
                         <tbody align="center">
                         <tr>
                                 <td>
+
                                   <?php
-                                  $pc1 = 1; 
-                                  if ($pc1 == 1) {
-                                    ?>
-                                    <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_online.png' width="50" height="50">
-                                  <?php }
-                                  elseif ($pc1 == 0) {
+                                  $pc1='2C:56:DC:81:51:E8';                                  ;
+                                  if ($pc1 == '0') {
                                     ?>
                                     <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_broken.png' width="50" height="50">
                                   <?php }
                                   else {
                                     ?>
-                                    <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50">
+                                    <?php
+                                    for ($x=0; $x <$arrlength; $x++){
+                                      ?>
+                                      <?php
+                                      if ($pc1 == $mac[$x]){
+                                        $aktifpc1 = 'pc_online.png';
+                                        break;                                                                            
+                                      }
+                                      else {
+                                        $aktifpc1 = 'pc_offline.png';
+                                      } ?>
+                                   <?php } ?>                                  
+                                   <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc1 ?>' width="50" height="50">
                                   <?php } ?>
+
                                 </td>
+
                                 <td>
                                 <?php
                                   $pc2 = 1; 
