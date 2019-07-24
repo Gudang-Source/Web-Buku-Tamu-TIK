@@ -182,7 +182,7 @@
 						   <p>&nbsp</p>
 						    <form method="POST" action="<?php echo base_url();?>login/getlogin" onsubmit="return cekform();">
 						      <div class="form-group has-feedback">
-						        <input type="Email" name="Email" id="Email" class="form-control" placeholder="Email" required>
+						        <input type="text" name="Email" id="Email" class="form-control" placeholder="Username" required>
 						        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 						      </div>
 

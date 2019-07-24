@@ -11,7 +11,7 @@
     </ul>
 
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="active">
+      <li>
         <a href="<?php echo base_url() ?>report">
           <i class="fa fa-book"></i> <span>Report</span>
         </a>

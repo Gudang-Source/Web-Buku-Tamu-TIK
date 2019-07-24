@@ -70,26 +70,26 @@
                     <i class="fa fa-tv" aria-hidden="true"></i>
                     <h3 class="box-title text-center">Daftar Komputer</h3>
                 </div>
+                <?php
+                                foreach ($data->result() as $row) {
+                                  $pc[] = $row->mac_address;
+                                  } ?>
                 <div class="box-body table-responsive no-padding">
                     <table class="table">
                         <tbody align="center">
                         <tr>
                                 <td>
-                                  <?php
-                                  $pc1 = 1; 
-                                  if ($pc1 == 1) {
+                                
+                                <?php
+                                  if ($pc[0] == '1') {
                                     ?>
                                     <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_online.png' width="50" height="50">
-                                  <?php }
-                                  elseif ($pc1 == 0) {
-                                    ?>
-                                    <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_broken.png' width="50" height="50">
                                   <?php }
                                   else {
                                     ?>
                                     <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50">
                                   <?php } ?>
-                                </td>
+                                </td> 
                                 <td>
                                 <?php
                                   $pc2 = 1; 
@@ -102,6 +102,7 @@
                                     <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50">
                                   <?php } ?>
                                 </td>
+                                  
                                 <td>&nbsp</td>
                                 <td>
                                 <?php

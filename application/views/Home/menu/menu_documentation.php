@@ -13,7 +13,7 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="active">
         <a href="<?php echo base_url() ?>documentation">
-          <i class="fa fa-book"></i> <span>Documentation</span>
+          <i class="fa fa-book"></i> <span>Cara Penggunaan</span>
         </a>
       </li>
     </ul>

@@ -11,12 +11,7 @@ class Home extends CI_Controller {
 		$isi['sub_judul'] = '';
 		$isi['title'] = "E-Learning TIK";
 		$isi['menu'] = "Home/menu/menu_home";
-		//$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
-		/*$isi['data']		= $this->db->query("SELECT * FROM mahasiswa
-                                                INNER JOIN tugas_akhir ON tugas_akhir.Email = mahasiswa.Email
-                                                INNER JOIN dosen ON tugas_akhir.EmailDosen = dosen.EmailDosen
-                                                WHERE mahasiswa.Email='$email_login'");
-	 $isi['cek_kondisi'] = $this->db->query("SELECT id_ta FROM tugas_akhir WHERE Email = '$email_login'")->num_rows();*/
+		$isi['data'] = $this->db->query("SELECT mac_address FROM pc ORDER BY `id` ASC");
 		$this->load->view('Home/tampilan_home',$isi);
 	}
 }

@@ -3,7 +3,7 @@
   <section class="sidebar">
     <!-- ini menu side bar -->
     <ul class="sidebar-menu" data-widget="tree">
-      <li>
+      <li class="active">
        <a href="<?php echo base_url() ?>beranda">
          <i class="fa fa-home"></i> <span>Beranda</span>
        </a>
@@ -11,7 +11,7 @@
     </ul>
 
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="active">
+      <li>
         <a href="<?php echo base_url() ?>report">
           <i class="fa fa-book"></i> <span>Report</span>
         </a>
