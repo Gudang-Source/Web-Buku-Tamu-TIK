@@ -100,6 +100,7 @@ $offlineuser = 100 - $aktifuser;
                         <table class="table">
                             <tbody align="center">
                                 <tr>
+                                    <!-- PC 1 -->
                                     <td>
                                         <?php                              
                                   if ($pc[0] == '0') {
@@ -123,7 +124,7 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc1 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
+                                    <!-- PC 2 -->
                                     <td>
                                         <?php                                
                                   if ($pc[1] == '0') {
@@ -147,9 +148,8 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc2 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
                                     <td>&nbsp</td>
-
+                                    <!-- PC 3 -->
                                     <td>
                                         <?php                                
                                   if ($pc[2] == '0') {
@@ -173,7 +173,7 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc3 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
+                                    <!-- PC 4 -->
                                     <td>
                                         <?php                               
                                   if ($pc[3] == '0') {
@@ -197,9 +197,8 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc4 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
                                     <td>&nbsp</td>
-
+                                    <!-- PC 5 -->
                                     <td>
                                         <?php                               
                                   if ($pc[4] == '0') {
@@ -223,7 +222,7 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc5 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
+                                    <!-- PC 6 -->
                                     <td>
                                         <?php                               
                                   if ($pc[5] == '0') {
@@ -247,9 +246,8 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc6 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
                                     <td>&nbsp</td>
-
+                                    <!-- PC 7 -->
                                     <td>
                                         <?php                               
                                   if ($pc[6] == '0') {
@@ -273,7 +271,7 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc7 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
+                                    <!-- PC 8 -->
                                     <td>
                                         <?php                              
                                   if ($pc[7] == '0') {
@@ -297,9 +295,8 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc8 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
                                     <td>&nbsp</td>
-
+                                    <!-- PC 9 -->
                                     <td>
                                         <?php                               
                                   if ($pc[8] == '0') {
@@ -323,7 +320,7 @@ $offlineuser = 100 - $aktifuser;
                                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc9 ?>' width="50" height="50">
                                                             <?php } ?>
                                     </td>
-
+                                    <!-- PC 10 -->
                                     <td>
                                         <?php                                
                                   if ($pc[9] == '0') {
