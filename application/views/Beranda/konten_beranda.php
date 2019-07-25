@@ -358,7 +358,7 @@ $offlineuser = 100 - $aktifuser;
                                     for ($x=0; $x <$arrlength; $x++){
                                       ?>
                                                     <?php
-                                      if ($pc11 == $mac[$x]){
+                                      if ($pc[10] == $mac[$x]){
                                         $aktifpc[10] = 'pc_online.png';
                                         break;                                                                            
                                       }
