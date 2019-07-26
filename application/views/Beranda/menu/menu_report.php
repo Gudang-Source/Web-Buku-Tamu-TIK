@@ -28,7 +28,7 @@
         </a>
         <ul class="treeview-menu">
             <li class="active"><a href="<?php echo base_url() ?>setting_macaddress"><i class="fa fa-circle-o"></i> Change Mac-Address</a></li>
-            <li class="active"><a href="<?php echo base_url() ?>setting_pcrusak"><i class="fa fa-circle-o"></i> Input Computter Error</a></li>
+            <li class="active"><a href="<?php echo base_url() ?>setting_pcrusak"><i class="fa fa-circle-o"></i> Input Computer Error</a></li>
           </ul>
       </li>
     </ul>

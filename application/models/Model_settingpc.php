@@ -8,7 +8,7 @@ class Model_settingpc extends CI_model {
 	}
 
 	public function updatepcrusak($id) {
-		$hasil=$this->db->query("UPDATE `pc` SET `mac_address` = '0' WHERE `pc`.`id` = $id");
+		$hasil=$this->db->query("UPDATE `pc` SET `status_pc` = '2' WHERE `pc`.`id` = $id");
 		return $hasil;
 	}
 }
