@@ -11,8 +11,13 @@ class Report extends CI_Controller {
 		$isi['sub_judul'] = 'Report';
 		$isi['menu'] = "Beranda/menu/menu_report";
 		$isi['title'] = "E-Learning TIK | Laporan";
-		//$isi['untuk_menu']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
-		//$isi['data']		= $this->db->query("SELECT * FROM mahasiswa WHERE Email='$email_login'");
+		$isi['pcdb'] = $this->db->query("SELECT id FROM pc ORDER BY `id` ASC");
+		$isi['macdb'] = $this->db->query("SELECT mac_address FROM pc ORDER BY `id` ASC");
+		$isi['checkmacdb'] = $this->db->query("SELECT mac_address FROM record ORDER BY `id` ASC");
+		$isi['checknamadb'] = $this->db->query("SELECT nama FROM record ORDER BY `id` ASC");
+		$isi['checknomorpcdb'] = $this->db->query("SELECT nomor_pc FROM record ORDER BY `id` ASC");
+		$isi['checkipdb'] = $this->db->query("SELECT ip FROM record ORDER BY `id` ASC");
+		$isi['checkiddb'] = $this->db->query("SELECT id FROM record ORDER BY `id` ASC");
 		$this->load->view('Beranda/tampilan_beranda',$isi);
 	}
 }
