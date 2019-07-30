@@ -33,54 +33,54 @@ foreach ($macdb->result() as $row) {
 }
 ?>
 
-                <!-- Database Record -->
-                <?php
-//Get id from database record
-foreach ($checkiddb->result() as $row) {
-  $id_db[] = $row->id;
-}
-$jumlahrecord = count($id_db);
-?>
-                        <?php
+                    <?php
 //Get Nama from database record
 foreach ($checknamadb->result() as $row) {
   $nama_db[] = $row->nama;
 }
 ?>
-                            <?php
+                        <?php
 //Get Nomor_PC from database record
 foreach ($checknomorpcdb->result() as $row) {
   $nomorpc_db[] = $row->nomor_pc;
 }
 ?>
-                                <?php
+                            <?php
 //Get ip from database record
 foreach ($checkipdb->result() as $row) {
   $ip_db[] = $row->ip;
 }
 ?>
-                                    <?php
+                                <?php
 //Get Mac-address from database record
 foreach ($checkmacdb->result() as $row) {
   $mac_db[] = $row->mac_address;
 }
 ?>
-
-<!-- Get User Login -->
-<?php
-for ($j=0; $j<$jumlahrecord; $j++){
+                                    <!-- Get User Login -->
+                                    <?php
+                                    $data_db = 0;
+for ($x=0; $x<$arrlength; $x++){
   //Cek Mikrotik to Database Record
-  for ($x=0; $x<$arrlength; $x++){
+  for ($j=0; $j<$jumlah_id; $j++){
     if($nama_db[$j] == $user[$x] && $ip_db[$j] == $ip[$x] && $mac_db[$j] == $mac[$x]){
-      //Tidak masuk
-      goto test;
+      $data_db = 1; //1 = ada, 0 =  tidak ada
+      break;
     } else {
-      $username_record = $user[$x];
-      $ip_record = $ip[$x];
-      $mac_record = $mac[$x];
-      $recordmasuk=$this->db->query("INSERT INTO `record` (`nama`, `ip`, `mac_address`) VALUES ('$username_record', '$ip_record', '$mac_record')");
-    } test:
+      $data_db = 0;
+    }
   } 
+
+  if($data_db == 1){
+    //Data tidak masuk
+    goto data_ada;
+  } else {
+    $username_record = $user[$x];
+    $ip_record = $ip[$x];
+    $mac_record = $mac[$x];
+    $recordmasuk=$this->db->query("INSERT INTO `record` (`nama`, `ip`, `mac_address`) VALUES ('$username_record', '$ip_record', '$mac_record')");
+  }
+  data_ada:
 }
 ?>
 

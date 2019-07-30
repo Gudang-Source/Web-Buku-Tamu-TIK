@@ -142,194 +142,39 @@ $pc_rusak=0;
                     <div class="box-body table-responsive no-padding">
                         <table class="table">
                             <tbody align="center">
-                                <tr>
-                                    <!-- PC 1 -->
-                                    <td>
-                                        <?php                              
-                                  if ($status[0] == 2) {
-                                    ?>
+                            <?php
+                                $pcke = 0;
+                                for ($j=1;$j<=10;$j++){ ?> <tr>
+                                <?php
+                                    for ($k=1;$k<=5;$k++){
+                                        for ($l=1;$l<=2;$l++){  ?>
+                                            <td> 
+                                            <?php             
+                                            if ($status[$pcke] == 2) { ?>
                                             <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_broken.png' width="50" height="50">
-                                            <?php }
-                                  else {
-                                    ?>
-                                                <?php
-                                    for ($x=0; $x <$arrlength; $x++){
-                                      ?>
-                                                    <?php
-                                      if ($pc[0] == $mac[$x]){
-                                        $status_id = $pc_id[0];
-                                        $status=$this->db->query("UPDATE `pc` SET `status_pc` = '1' WHERE `pc`.`id` = $status_id");
-                                        $aktifpc1 = 'pc_online.png';
-                                        break;                                                                            
-                                      }
-                                      else {
-                                        $status_id = $pc_id[0];
-                                        $status=$this->db->query("UPDATE `pc` SET `status_pc` = '0' WHERE `pc`.`id` = $status_id");
-                                        $aktifpc1 = 'pc_offline.png';
-                                      } ?>
-                                                        <?php } ?>
-                                                            <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc1 ?>' width="50" height="50">
-                                                            <?php } ?>
-                                    </td>
-                                    <!-- Break -->
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
-                                <tr>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td>&nbsp</td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                    <td><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_offline.png' width="50" height="50"></td>
-                                </tr>
+                                        <?php }
+                                            else {
+                                                for ($x=0; $x <$arrlength; $x++){      
+                                                    if ($pc[$pcke] == $mac[$x]){
+                                                        $status_id = $pc_id[$pcke];
+                                                        $status=$this->db->query("UPDATE `pc` SET `status_pc` = '1' WHERE `pc`.`id` = $status_id");
+                                                        $aktifpc1 = 'pc_online.png';
+                                                        break;                                                                            
+                                                    }
+                                                    else {
+                                                        $status_id = $pc_id[$pcke];
+                                                        $status=$this->db->query("UPDATE `pc` SET `status_pc` = '0' WHERE `pc`.`id` = $status_id");
+                                                        $aktifpc1 = 'pc_offline.png';
+                                                    } 
+                                                } ?> <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc1 ?>' width="50" height="50">
+                                     <?php  } 
+                                            $pcke = $pcke + 1;?>
+                                            </td>
+                                <?php   } ?><td> &nbsp </td>
+                                <?php } ?> </tr>
+                            <?php } ?>
+                                    <!-- PC 1 -->
+                                    
                             </tbody>
                         </table>
                     </div>
