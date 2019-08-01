@@ -98,8 +98,8 @@
     <?php $this->load->view($konten); ?>
     <!-- /.konten -->
   </div>
-
   <!-- /.content-wrapper -->
+  
   <div class="control-sidebar-bg"></div>
   <footer class="main-footer">
     <div class="pull-right hidden-xs">

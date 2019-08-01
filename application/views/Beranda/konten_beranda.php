@@ -156,25 +156,73 @@ $pc_rusak=0;
                                             else {
                                                 for ($x=0; $x <$arrlength; $x++){      
                                                     if ($pc[$pcke] == $mac[$x]){
+                                                        $statuspc = 1;
                                                         $status_id = $pc_id[$pcke];
                                                         $status=$this->db->query("UPDATE `pc` SET `status_pc` = '1' WHERE `pc`.`id` = $status_id");
                                                         $aktifpc1 = 'pc_online.png';
                                                         break;                                                                            
                                                     }
                                                     else {
+                                                        $statuspc = 0;
                                                         $status_id = $pc_id[$pcke];
                                                         $status=$this->db->query("UPDATE `pc` SET `status_pc` = '0' WHERE `pc`.`id` = $status_id");
                                                         $aktifpc1 = 'pc_offline.png';
                                                     } 
-                                                } ?> <img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc1 ?>' width="50" height="50">
+                                                } ?> 
+                                                
+                                                <button type="button" data-toggle="modal" data-target="#exampleModal<?php echo $pcke; ?>"><img src='http://localhost/Bukutamu-TIK/assets/dist/img/<?php echo $aktifpc1 ?>' width="50" height="50"></button>
+                                                <div class="modal fade" id="exampleModal<?php echo $pcke; ?>" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content" align="center">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">Informasi Komputer</h3>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body" align="left">
+                                                                <h5>Nomor Komputer</h5>
+                                                                <p><?php if ($statuspc == 1){
+                                                                    echo $pc_id[$pcke];
+                                                                } else {
+                                                                    echo $pc_id[$pcke];
+                                                                }?></p>
+                                                                <hr>
+                                                                <h5>User</h5>
+                                                                <p><?php if ($statuspc == 1){
+                                                                    echo $user[$x]; 
+                                                                } else {
+                                                                    echo "-";
+                                                                }?></p>
+                                                                <hr>
+                                                                <h5>IP</h5>
+                                                                <p><?php if ($statuspc == 1){
+                                                                    echo $ip[$x]; 
+                                                                } else {
+                                                                    echo "-";
+                                                                }?></p>
+                                                                <hr>
+                                                                <h5>Mac-Address</h5>
+                                                                <p><?php if ($statuspc == 1){
+                                                                    echo $mac[$x]; 
+                                                                } else {
+                                                                    echo "-";
+                                                                }?></p>
+                                                                <hr>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Simpan</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                      <?php  } 
                                             $pcke = $pcke + 1;?>
                                             </td>
                                 <?php   } ?><td> &nbsp </td>
                                 <?php } ?> </tr>
                             <?php } ?>
-                                    <!-- PC 1 -->
-                                    
                             </tbody>
                         </table>
                     </div>

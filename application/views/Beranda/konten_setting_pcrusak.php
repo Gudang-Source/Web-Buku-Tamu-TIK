@@ -5,7 +5,7 @@
     <div class="box box-warning">
         <div class="box-header">
            <i class="fa fa-cogs" aria-hidden="true"></i>
-           <h3 class="box-title text-center">Komputer Rusak</h3>
+           <h3 class="box-title text-center">Status Komputer</h3>
         </div>
         <div class="box-body">
         <form class="form-horizontal" action="<?php echo base_url(); ?>Setting_Pcrusak/updatepcrusak" method="post" enctype="multipart/form-data">
@@ -13,6 +13,16 @@
                   <label class="col-sm-2 control-label">Nomor PC</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPCNumb" name="inputPCNumb" placeholder="Nomor PC">
+                  </div>
+                </div>
+                <div> &nbsp </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Kondisi PC</label>
+                  <div class="col-sm-2">
+                    <select class="form-control" id="inputStatus" name="inputStatus">
+                      <option>Baik</option>
+                      <option>Rusak</option>
+                    </select>
                   </div>
                 </div>
                 <div> &nbsp </div>

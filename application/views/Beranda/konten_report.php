@@ -32,7 +32,7 @@ foreach ($macdb->result() as $row) {
   $pc_mac[] = $row->mac_address;
 }
 ?>
-
+                    <!-- Database Record -->
                     <?php
 //Get Nama from database record
 foreach ($checknamadb->result() as $row) {
@@ -61,6 +61,15 @@ foreach ($checkmacdb->result() as $row) {
                                     <?php
                                     $data_db = 0;
 for ($x=0; $x<$arrlength; $x++){
+  for ($k=0;$k<$jumlahpc;$k++){
+    if ($pc_mac[$k]==$mac[$x]){
+      $pcid_record = $pc_id[$k];
+      break;
+    } else {
+      $pcid_record = 0;
+    }
+  }
+
   //Cek Mikrotik to Database Record
   for ($j=0; $j<$jumlah_id; $j++){
     if($nama_db[$j] == $user[$x] && $ip_db[$j] == $ip[$x] && $mac_db[$j] == $mac[$x]){
@@ -78,7 +87,7 @@ for ($x=0; $x<$arrlength; $x++){
     $username_record = $user[$x];
     $ip_record = $ip[$x];
     $mac_record = $mac[$x];
-    $recordmasuk=$this->db->query("INSERT INTO `record` (`nama`, `ip`, `mac_address`) VALUES ('$username_record', '$ip_record', '$mac_record')");
+    $recordmasuk=$this->db->query("INSERT INTO `record` (`nama`, `nomor_pc`, `ip`, `mac_address`) VALUES ('$username_record', '$pcid_record', '$ip_record', '$mac_record')");
   }
   data_ada:
 }
@@ -120,17 +129,23 @@ for ($x=0; $x<$arrlength; $x++){
     <div class="box box-warning">
        <div class="box-header">
            <i class="fa fa-clipboard" aria-hidden="true"></i>
-           <h3 class="box-title text-center">Laporan Saat ini</h3>
+           <h3 class="box-title text-center">Daftar User Aktif</h3>
        </div>
        <table class="table">
-        <tbody>
+        <tbody align="center">
          <tr>
           <td>User Name</td>
-          <td>Mac Address</td>
           <td>IP Address</td>
-          <td>Waktu</td>
-          <td>Tanggal</td>
+          <td>Mac Address</td>
          </tr>
+         <?php
+          for ($a=0; $a<$arrlength; $a++){?>
+            <tr>
+            <td><?php echo $user[$a]; ?></td>
+            <td><?php echo $ip[$a]; ?></td>
+            <td><?php echo $mac[$a]; ?></td>
+            </tr>
+        <?php  } ?>
         </tbody>
        </table>
     </div>

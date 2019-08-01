@@ -11,7 +11,9 @@ class Home extends CI_Controller {
 		$isi['sub_judul'] = '';
 		$isi['title'] = "E-Learning TIK";
 		$isi['menu'] = "Home/menu/menu_home";
-		$isi['data'] = $this->db->query("SELECT mac_address FROM pc ORDER BY `id` ASC");
+		$isi['macdb'] = $this->db->query("SELECT mac_address FROM pc ORDER BY `id` ASC");
+		$isi['statusdb'] = $this->db->query("SELECT status_pc FROM pc ORDER BY `id` ASC");
+		$isi['pcdb'] = $this->db->query("SELECT id FROM pc ORDER BY `id` ASC");
 		$this->load->view('Home/tampilan_home',$isi);
 	}
 }
