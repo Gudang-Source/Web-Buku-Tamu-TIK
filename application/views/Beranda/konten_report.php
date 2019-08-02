@@ -134,9 +134,9 @@ for ($x=0; $x<$arrlength; $x++){
        <table class="table">
         <tbody align="center">
          <tr>
-          <td>User Name</td>
-          <td>IP Address</td>
-          <td>Mac Address</td>
+          <td><b>User Name</b></td>
+          <td><b>IP Address</b></td>
+          <td><b>Mac Address</b></td>
          </tr>
          <?php
           for ($a=0; $a<$arrlength; $a++){?>

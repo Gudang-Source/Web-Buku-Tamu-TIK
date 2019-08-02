@@ -181,28 +181,28 @@ $pc_rusak=0;
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body" align="left">
-                                                                <h5>Nomor Komputer</h5>
+                                                                <h5><b>NOMOR KOMPUTER</b></h5>
                                                                 <p><?php if ($statuspc == 1){
                                                                     echo $pc_id[$pcke];
                                                                 } else {
                                                                     echo $pc_id[$pcke];
                                                                 }?></p>
                                                                 <hr>
-                                                                <h5>User</h5>
+                                                                <h5><b>USER</b></h5>
                                                                 <p><?php if ($statuspc == 1){
                                                                     echo $user[$x]; 
                                                                 } else {
                                                                     echo "-";
                                                                 }?></p>
                                                                 <hr>
-                                                                <h5>IP</h5>
+                                                                <h5><b>IP</b></h5>
                                                                 <p><?php if ($statuspc == 1){
                                                                     echo $ip[$x]; 
                                                                 } else {
                                                                     echo "-";
                                                                 }?></p>
                                                                 <hr>
-                                                                <h5>Mac-Address</h5>
+                                                                <h5><b>MAC-ADDRESS</b></h5>
                                                                 <p><?php if ($statuspc == 1){
                                                                     echo $mac[$x]; 
                                                                 } else {
@@ -212,7 +212,7 @@ $pc_rusak=0;
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                <button type="button" class="btn btn-primary">Simpan</button>
+                                                                <!-- <button type="button" class="btn btn-primary">Simpan</button> -->
                                                             </div>
                                                         </div>
                                                     </div>
