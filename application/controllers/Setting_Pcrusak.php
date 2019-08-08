@@ -18,8 +18,9 @@ class Setting_Pcrusak extends CI_Controller {
 
 	function updatepcrusak() {
 		$id = $this->input->post('inputPCNumb');
+		$status = $this->input->post('inputStatus');
 		$this->load->model('model_settingpc');
-		$this->model_settingpc->updatepcrusak($id);
+		$this->model_settingpc->updatepcrusak($id,$status);
 		echo "<script>window.alert('Perubahan data berhasil')</script>";
 		echo "<meta http-equiv='refresh' content='0;url=http://localhost/Bukutamu-TIK/setting_pcrusak'>";
 	}

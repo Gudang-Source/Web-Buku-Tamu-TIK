@@ -20,8 +20,8 @@
                   <label class="col-sm-2 control-label">Kondisi PC</label>
                   <div class="col-sm-2">
                     <select class="form-control" id="inputStatus" name="inputStatus">
-                      <option>Baik</option>
-                      <option>Rusak</option>
+                      <option value='0'>Baik</option>
+                      <option value='2'>Rusak</option>
                     </select>
                   </div>
                 </div>

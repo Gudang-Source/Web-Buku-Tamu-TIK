@@ -21,4 +21,19 @@ class Report extends CI_Controller {
 		$isi['jumlah_id'] = $this->db->query("SELECT id FROM record ORDER BY `id` ASC")->num_rows();
 		$this->load->view('Beranda/tampilan_beranda',$isi);
 	}
+
+	public function viewreport()
+	{
+		$isi['konten'] = 'Beranda/konten_report_view';
+		$isi['judul'] = 'Beranda';
+		$isi['Welcome'] = 'Report';
+		$isi['sub_judul'] = 'Report';
+		$isi['menu'] = "Beranda/menu/menu_nonaktif";
+		$isi['title'] = "E-Learning TIK | Laporan";
+		$this->load->model('model_report');
+		$tanggalpilih = $this->input->post('tgl_report');
+		$isi['data']		= $this->model_report->viewreport($tanggalpilih);
+		$this->load->view('Beranda/tampilan_beranda',$isi);
+	}
+
 }

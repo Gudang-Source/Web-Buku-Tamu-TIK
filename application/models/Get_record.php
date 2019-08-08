@@ -1,6 +1,9 @@
-<section class="content">
-    <?php
-//Connect API Mikrotik
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Get_record extends CI_model {
+    public function update_record() {
+        //Connect API Mikrotik
 use PEAR2\Net\RouterOS;
 
 require_once 'PEAR2/Autoload.php';
@@ -19,6 +22,17 @@ $arrlength = count($user);
 ?>
 
         <!-- Database PC -->
+        <?php
+        $pcdb = $this->db->query("SELECT id FROM pc ORDER BY `id` ASC");
+        $macdb = $this->db->query("SELECT mac_address FROM pc ORDER BY `id` ASC");
+        $checkmacdb = $this->db->query("SELECT mac_address FROM record ORDER BY `id` ASC");
+		$checknamadb = $this->db->query("SELECT nama FROM record ORDER BY `id` ASC");
+		$checknomorpcdb = $this->db->query("SELECT nomor_pc FROM record ORDER BY `id` ASC");
+		$checkipdb = $this->db->query("SELECT ip FROM record ORDER BY `id` ASC");
+		$checkiddb = $this->db->query("SELECT id FROM record ORDER BY `id` ASC");
+		$jumlah_id = $this->db->query("SELECT id FROM record ORDER BY `id` ASC")->num_rows();
+        ?>
+
         <?php
 //Get ID PC Number from database pc
 foreach ($pcdb->result() as $row){
@@ -91,64 +105,5 @@ for ($x=0; $x<$arrlength; $x++){
   }
   data_ada:
 }
-?>
-
-<!-- Content View -->
-  <div class="row">
-   <!-- ./col -->
-    <div class="col-xs-12">
-    <div class="box box-warning">
-       <div class="box-header">
-           <i class="fa fa-clipboard" aria-hidden="true"></i>
-           <h3 class="box-title text-center">Cek Laporan</h3>
-       </div>
-       <form action="<?php base_url() ?>Report/viewreport" method="POST" enctype="multipart/form-data">
-       <div class="form-group">
-					<label class="col-sm-2 control-label">Masukkan Tanggal</label>
-					<div class="col-sm-10">
-						<div class="input-group date">
-							<div class="input-group-addon">
-								<i class="fa fa-calendar"></i>
-							</div>
-							<input type="text" class="form-control pull-right" name="tgl_report" id="datepicker">
-						</div>
-					</div>
-				</div>
-        <div>&nbsp</div>
-				<div class="box-footer">
-					<button type="submit" class="btn btn-primary pull-right"><i class="fa fa-send"></i>&nbsp&nbspLihat</button>
-        </div>
-        </form>
-    </div>
-    </div>
-  </div>
-
-  <div class="row">
-   <!-- ./col -->
-   <div class="col-xs-12">
-    <div class="box box-warning">
-       <div class="box-header">
-           <i class="fa fa-clipboard" aria-hidden="true"></i>
-           <h3 class="box-title text-center">Daftar User Aktif</h3>
-       </div>
-       <table class="table">
-        <tbody align="center">
-         <tr>
-          <td><b>User Name</b></td>
-          <td><b>IP Address</b></td>
-          <td><b>Mac Address</b></td>
-         </tr>
-         <?php
-          for ($a=0; $a<$arrlength; $a++){?>
-            <tr>
-            <td><?php echo $user[$a]; ?></td>
-            <td><?php echo $ip[$a]; ?></td>
-            <td><?php echo $mac[$a]; ?></td>
-            </tr>
-        <?php  } ?>
-        </tbody>
-       </table>
-    </div>
-   </div>
-  </div>
-</section>
+	}
+}
