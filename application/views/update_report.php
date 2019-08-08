@@ -1,9 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Get_record extends CI_model {
-    public function update_record() {
-        //Connect API Mikrotik
+//Connect API Mikrotik
 use PEAR2\Net\RouterOS;
 
 require_once 'PEAR2/Autoload.php';
@@ -22,17 +18,6 @@ $arrlength = count($user);
 ?>
 
         <!-- Database PC -->
-        <?php
-        $pcdb = $this->db->query("SELECT id FROM pc ORDER BY `id` ASC");
-        $macdb = $this->db->query("SELECT mac_address FROM pc ORDER BY `id` ASC");
-        $checkmacdb = $this->db->query("SELECT mac_address FROM record ORDER BY `id` ASC");
-		$checknamadb = $this->db->query("SELECT nama FROM record ORDER BY `id` ASC");
-		$checknomorpcdb = $this->db->query("SELECT nomor_pc FROM record ORDER BY `id` ASC");
-		$checkipdb = $this->db->query("SELECT ip FROM record ORDER BY `id` ASC");
-		$checkiddb = $this->db->query("SELECT id FROM record ORDER BY `id` ASC");
-		$jumlah_id = $this->db->query("SELECT id FROM record ORDER BY `id` ASC")->num_rows();
-        ?>
-
         <?php
 //Get ID PC Number from database pc
 foreach ($pcdb->result() as $row){
@@ -105,5 +90,4 @@ for ($x=0; $x<$arrlength; $x++){
   }
   data_ada:
 }
-	}
-}
+?>
