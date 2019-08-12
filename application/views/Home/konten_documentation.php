@@ -2,7 +2,7 @@
  <div class="row">
    <!-- ./col -->
    <div class="col-xs-12">
-    <div class="box box-warning">
+    <div class="box box-danger">
        <div class="box-header">
            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
            <h3 class="box-title text-center">Tata Cara Penggunaa E-Learning TIK</h3>

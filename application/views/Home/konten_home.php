@@ -70,7 +70,7 @@ $pc_rusak=0;
     <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-            <div class="box box-warning">
+            <div class="box box-danger">
                 <div class="box-header">
                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                     <h3 class="box-title text-center">Status Komputer</h3>
@@ -132,7 +132,7 @@ $pc_rusak=0;
     <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-            <div class="box box-warning">
+            <div class="box box-danger">
                 <div class="box-header">
                     <i class="fa fa-tv" aria-hidden="true"></i>
                     <h3 class="box-title text-center">Daftar Komputer</h3>

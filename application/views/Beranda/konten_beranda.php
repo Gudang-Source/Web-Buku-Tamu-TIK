@@ -70,7 +70,7 @@ $pc_rusak=0;
     <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-            <div class="box box-warning">
+            <div class="box box-danger">
                 <div class="box-header">
                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                     <h3 class="box-title text-center">Status Komputer</h3>
@@ -132,7 +132,7 @@ $pc_rusak=0;
     <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-            <div class="box box-warning">
+            <div class="box box-danger">
                 <div class="box-header">
                     <i class="fa fa-tv" aria-hidden="true"></i>
                     <h3 class="box-title text-center">Daftar Komputer</h3>
@@ -151,7 +151,26 @@ $pc_rusak=0;
                                             <td> 
                                             <?php             
                                             if ($status[$pcke] == 2) { ?>
-                                            <img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_broken.png' width="50" height="50">
+                                            <button type="button" data-toggle="modal" data-target="#exampleModal<?php echo $pcke; ?>"><img src='http://localhost/Bukutamu-TIK/assets/dist/img/pc_broken.png' width="50" height="50"></button>
+                                            <div class="modal fade" id="exampleModal<?php echo $pcke; ?>" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content" align="center">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">Informasi Komputer</h3>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body" align="center">
+                                                                <h5><b>KOMPUTER SEDANG TIDAK BISA DIGUNAKAN</b></h5>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <!-- <button type="button" class="btn btn-primary">Simpan</button> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                         <?php }
                                             else {
                                                 for ($x=0; $x <$arrlength; $x++){      

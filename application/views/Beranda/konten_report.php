@@ -57,6 +57,12 @@ foreach ($checkmacdb->result() as $row) {
   $mac_db[] = $row->mac_address;
 }
 ?>
+                                <?php
+//Get Mac-address from database record
+foreach ($checktanggaldb->result() as $row) {
+$tanggal_db[] = $row->tanggal;
+}
+?>
                                     <!-- Get User Login -->
                                     <?php
                                     $data_db = 0;
@@ -72,7 +78,8 @@ for ($x=0; $x<$arrlength; $x++){
 
   //Cek Mikrotik to Database Record
   for ($j=0; $j<$jumlah_id; $j++){
-    if($nama_db[$j] == $user[$x] && $ip_db[$j] == $ip[$x] && $mac_db[$j] == $mac[$x]){
+    $today = date("Y-m-d");
+    if($nama_db[$j] == $user[$x] && $ip_db[$j] == $ip[$x] && $mac_db[$j] == $mac[$x] && $nomorpc_db[$j] == $pcid_record && $tanggal_db[$j] == $today){
       $data_db = 1; //1 = ada, 0 =  tidak ada
       break;
     } else {
@@ -97,7 +104,7 @@ for ($x=0; $x<$arrlength; $x++){
   <div class="row">
    <!-- ./col -->
     <div class="col-xs-12">
-    <div class="box box-warning">
+    <div class="box box-danger">
        <div class="box-header">
            <i class="fa fa-clipboard" aria-hidden="true"></i>
            <h3 class="box-title text-center">Cek Laporan</h3>
@@ -126,7 +133,7 @@ for ($x=0; $x<$arrlength; $x++){
   <div class="row">
    <!-- ./col -->
    <div class="col-xs-12">
-    <div class="box box-warning">
+    <div class="box box-danger">
        <div class="box-header">
            <i class="fa fa-clipboard" aria-hidden="true"></i>
            <h3 class="box-title text-center">Daftar User Aktif</h3>

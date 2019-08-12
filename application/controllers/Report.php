@@ -18,6 +18,7 @@ class Report extends CI_Controller {
 		$isi['checknomorpcdb'] = $this->db->query("SELECT nomor_pc FROM record ORDER BY `id` ASC");
 		$isi['checkipdb'] = $this->db->query("SELECT ip FROM record ORDER BY `id` ASC");
 		$isi['checkiddb'] = $this->db->query("SELECT id FROM record ORDER BY `id` ASC");
+		$isi['checktanggaldb'] = $this->db->query("SELECT tanggal from record ORDER BY `id` ASC");
 		$isi['jumlah_id'] = $this->db->query("SELECT id FROM record ORDER BY `id` ASC")->num_rows();
 		$this->load->view('Beranda/tampilan_beranda',$isi);
 	}

@@ -2,7 +2,7 @@
  <div class="row">
    <!-- ./col -->
    <div class="col-xs-12">
-    <div class="box box-warning">
+    <div class="box box-danger">
        <div class="box-header">
            <i class="fa fa-cogs" aria-hidden="true"></i>
            <h3 class="box-title text-center">Change Mac-address</h3>

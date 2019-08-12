@@ -1235,7 +1235,7 @@
 }
 
 .skin-blue .main-header .navbar {
-	background-color: #DAA520
+	background-color: #8c1515
 }
 
 .skin-blue .main-header .navbar .nav>li>a {
@@ -1267,7 +1267,7 @@
 }
 
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-	background-color: #e08e0b
+	background-color: #ce1616
 }
 
 @media (max-width:767px) {
@@ -1289,11 +1289,11 @@
 }
 
 .skin-blue .main-header .logo:hover {
-	background-color: #f39a0d
+	background-color: #ce1616
 }
 
 .skin-blue .main-header li.user-header {
-	background-color: #DAA520
+	background-color: #8c1515
 }
 
 .skin-blue .content-header {
